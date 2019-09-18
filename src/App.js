@@ -1,24 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from './Components/Container';
+import Footer from './Components/Footer';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+      <Header/>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu One
         </a>
-      </header>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">SubMenu One</a>
+          <a class="dropdown-item" href="#">SubMenu Two</a>
+          <a class="dropdown-item" href="#">SubMenu Three</a>
+          
+          <a class="dropdown-item" href="#">RFT Pulse</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Menu Two <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Menu Three <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Menu Four <span class="sr-only">(current)</span></a>
+      </li>
+       
+    </ul>
+  </div>
+</nav>
+      <Container/>
+      <Footer/>
     </div>
   );
 }
